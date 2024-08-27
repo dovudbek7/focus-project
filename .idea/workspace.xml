@@ -5,17 +5,115 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="795dd81b-ed73-4f93-bda8-03a2169381a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/collab-project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/focus/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/focus/managers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/focus/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/focus/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/focus/templatetags/blog_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/post-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/focus/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/focus/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/focus/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/focus/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/focus/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/focus/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/focus/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/focus/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/dashboard/dashboard-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/dashboard/dashboard-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/page-register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/page-register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app-calender.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app-email.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app-event-calender.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app-profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app-widget-card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chart-chartist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chart-chartjs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chart-flot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chart-knob.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chart-morris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chart-peity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chart-sparkline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chartist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chartjs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/email-compose.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/email-inbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/email-read.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/font-themify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-editor-summernote.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form-element.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-pickers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-validation-jquery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-validation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-wizard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gmaps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/invoice-editable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/invoice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout-blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/map-jqvmap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page-error-400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page-error-403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page-error-404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page-error-500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page-error-503.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page-lock-screen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table-basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table-bootstrap-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/table-bootstrap-basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table-datatable-basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table-export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table-jsgrid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table-row-select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-calendar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-carousel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-chat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-datamap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-datepicker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-nestable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-noui-slider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-portlets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-range-slider-advance.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-range-slider-basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-rating-bar-rating.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-rating-jRate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-scrollable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-select2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-sweetalert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-toastr.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-todo-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-vertical-carousel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc-weather.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-accordion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-alert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-alerts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-badge.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-button-group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-button.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-carousel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-dropdown.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-images.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-label.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-list-group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-media-object.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-pagination.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-panels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-popover.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-progressbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-recent-comments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-shopping-card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-social-card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-tab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-timeline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-tooltip.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-typography.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-user-card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ui-wells.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vector-map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widget-basic.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +123,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -42,21 +140,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\focus-project\collab-project\templates" />
       <recent name="C:\Users\user\Desktop\focus-project\collab-project\templates\accounts" />
     </key>
   </component>
@@ -78,11 +177,24 @@
       <updated>1724308318862</updated>
       <workItem from="1724308319764" duration="1500000" />
       <workItem from="1724309845360" duration="1138000" />
-      <workItem from="1724311236588" duration="11006000" />
+      <workItem from="1724311236588" duration="14613000" />
+      <workItem from="1724666580613" duration="2157000" />
+      <workItem from="1724669829116" duration="20690000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

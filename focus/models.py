@@ -1,9 +1,9 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 from mdeditor.fields import MDTextField
-
 from .managers import PostManager
 from taggit.managers import TaggableManager
 
@@ -49,13 +49,17 @@ class Post(BaseModel):
     def __str__(self):
         return self.title
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
     def get_absolute_url(self):
-        return reverse('exam:post_detail', args=[self.publish.year, self.publish.month, self.publish.day, self.slug])
+        return reverse('focus:post_details', args=[self.publish.year, self.publish.month, self.publish.day, self.slug])
 
     class Meta:
-        ordering = ['-updated']
+        ordering = ['-publish']
         indexes = [
-            models.Index(fields=['-updated']),
             models.Index(fields=['-publish']),
         ]
 
