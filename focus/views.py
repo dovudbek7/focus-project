@@ -1,37 +1,29 @@
 from datetime import timedelta, timezone
 
 from django.contrib.auth import authenticate, login, logout
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Count
-from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, DetailView, FormView
 from django.contrib import messages
-from taggit.models import Tag
 from django.utils import timezone
 from .forms import *
 from django.contrib.auth import views
 from focus.forms import LoginForm, SignupForm
 
-from django.contrib.auth.decorators import login_required
-
-from .models import Category
-
 
 def home(request):
     recent_posts = Post.published.order_by('-publish')[:5]  # Fetch latest 5 posts
     return render(request, 'index.html', {'recent_posts': recent_posts})
+
+
 def post_statistics_view(request):
-    # Get today's date and the last 7 days' range
     today = timezone.now().date()
     start_date = today - timedelta(days=7)
 
-    # Fetch total posts per day
     posts_by_day = Post.published.filter(publish__date__range=(start_date, today)) \
         .values('publish__date').annotate(total=Count('id')).order_by('publish__date')
     recent_posts = Post.published.order_by('-publish')[:5]
-    # Prepare data for the chart (convert dates to strings and format data for Morris.js)
     chart_data = [
         {'y': post['publish__date'].strftime('%Y-%m-%d'), 'a': post['total']}
         for post in posts_by_day
@@ -50,17 +42,14 @@ class PostDetailView(DetailView, FormView):
         context = super().get_context_data(**kwargs)
         context['comment_form'] = self.get_form()
 
-        # Fetch the current post object
         post = self.get_object()
 
-        # List of similar posts
         post_tags_ids = post.tags.values_list('id', flat=True)
         similar_posts = Post.published.filter(tags__in=post_tags_ids) \
             .exclude(id=post.id)
         similar_posts = similar_posts.annotate(same_tags=Count('tags')) \
                             .order_by('-same_tags', '-publish')[:4]
 
-        # Add similar posts to the context
         context['similar_posts'] = similar_posts
 
         return context
@@ -113,9 +102,9 @@ def post_create(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
-            post.user = request.user  # Assign the current user as the author of the post
-            post.save()  # Save the post instance
-            form.save_m2m()  # Save the many-to-many relationships (tags, categories)
+            post.user = request.user
+            post.save()
+            form.save_m2m()
             return redirect('focus:post-list')
     else:
         form = PostForm()

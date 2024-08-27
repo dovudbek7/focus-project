@@ -26,7 +26,7 @@ class SignupForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super(SignupForm, self).__init__(*args, **kwargs)
         for field_name in self.fields:
-            self.fields[field_name].help_text = None  # Removes help text for each field
+            self.fields[field_name].help_text = None
 class LoginForm(forms.Form):
     username = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'})

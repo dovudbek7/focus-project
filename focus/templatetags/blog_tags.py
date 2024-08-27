@@ -6,6 +6,7 @@ import markdown
 from django.db.models import Count
 from django.utils import timezone
 from datetime import timedelta
+
 register = template.Library()
 
 
